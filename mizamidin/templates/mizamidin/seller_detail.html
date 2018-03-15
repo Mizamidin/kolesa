@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>SELLER: {{ seller.first_name }}, {{ seller.last_name }} </h1>
+  </n>{{seller.date_of_birth}}
+  <div style="margin-left:20px;margin-top:20px">
+  <p><strong>CARS:</strong><a href="http://127.0.0.1:8000/mizamidin/car/1"> 1) CAR </a></p>
+  <p><strong>last_name:</strong> <a href=""> {{ seller.last_name }}</a></p>
+  <p><strong>first_name:</strong> <a href=""> {{ seller.first_name }}</a></p> 
+  <p><strong>date_of_birth:</strong> {{ seller.date_of_birth }}</p> 
+  <p><strong>phone:</strong> {{ seller.phone }}</p>  
+  </div>
+{% endblock %}

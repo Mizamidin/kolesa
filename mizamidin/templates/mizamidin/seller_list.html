@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1 style="background-color: gainsboro ">SELLER LIST</h1>
+
+    {% if seller_list %}
+    <ul>
+
+      {% for seller in seller_list %}
+      <li>
+        <a href="{{ seller.get_absolute_url }}">{{seller.first_name}},{{seller.last_name}}({{seller.date_of_birth}})</a> ({{seller.phone}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no sellers in the Kolesa.kz</p>
+    {% endif %}       
+{% endblock %}

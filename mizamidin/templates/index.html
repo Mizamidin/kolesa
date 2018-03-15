@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 style="background-color: gainsboro ">      O ~ KOLESA.KZ ~ O      </h1>
+<div class="ss" style="background-color: LightCyan ">
+  <h1><em>MiZaMiDiN</em></h1>
+<p>Бүгін: {% if weekday == 6 %} Жексенбі{% endif %}{% if weekday == 5 %} Сенбі{% endif %}{% if weekday == 4 %} Жұма{% endif %}{% if weekday == 3 %} Бейсенбі{% endif %}{% if weekday == 2 %} Сарсенбі{% endif %}{% if weekday == 1 %} Сейсенбі{% endif %}{% if weekday == 0 %} Дуйсенбі{% endif %}.</p>
+<p>Дата: {% if day < 10 %}0{{ day }}{% else %}{{ day }}{% endif %}/{% if month < 10 %}0{{ month }}{% else %}{{ month }}{% endif %}/{% if year < 10 %}0{{ year }}{% else %}{{ year }}{% endif %}</p>
+<p>Уақыт: {% if hour < 10 %}0{{ hour }}{% else %}{{ hour }}{% endif %}:{% if minute < 10 %}0{{ minute }}{% else %}{{ minute }}{% endif %}:{% if second < 10 %}0{{ second }}{% else %}{{ second }}{% endif %}</p>
+<p>Сіз бұл парақшада ( {{ num_visits }} ) рет болдыңыз.</p>
+
+<h2>Dynamic content</h2>
+
+  <p>The Kolesa.kz has the following record counts:</p>
+  <ul>
+    <li><strong>Cars:</strong> {{ num_cars }}</li>
+    <li><strong>Total:</strong> {{ num_instances }}</li>
+    <li><strong>Total Satylymda:</strong> {{ num_instances_available }}</li>
+    <li><strong>Sellers:</strong> {{ num_sellers }}</li>
+  </ul>
+</div>
+
+{% endblock %}
